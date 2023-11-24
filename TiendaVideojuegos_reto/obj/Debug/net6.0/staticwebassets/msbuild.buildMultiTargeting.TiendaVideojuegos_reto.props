@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\TiendaVideojuegos_reto.props" />
+</Project>
