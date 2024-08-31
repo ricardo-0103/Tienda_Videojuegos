@@ -1,0 +1,87 @@
+El servicio web permite gestionar todo el proceso básico de alquiler de una tienda de videojuegos. 
+Para acceder a las funcionalidades del aplicativo es necesario utilizar herramientas como postman para realizar solicitudes https, puesto que lo que se ha implementado es la parte del backend.
+
+En el apartado de clientes, están disponibles las siguientes funcionalidades, y se explica cómo acceder a cada una.
+Obtener la lista de los clientes
+GET: api/Cliente
+
+Obtener el balance de un cliente específico:
+GET: api/Clientes/Balance/{diCliente}
+Esta funcionalidad le permitirá al cliente ver la lista de los videojuegos que ha alquilado y cuánto ha gastado en total
+
+Obtener un cliente específico:
+GET: api/Clientes/{diCliente}
+
+Obtener el videojuego menos rentado por rangos de edad de 10 años en 10 años:
+GET: api/Clientes/JuegoMenosRentado
+Este requerimiento se trabajó bajo el supuesto de que al menos un cliente de cada rango de edad ha reservado cada videojuego, es decir, que no hay un videojuego que no haya sido alquilado por algún cliente de ese rango de edad.
+
+Actualizar los datos de un cliente:
+PUT: api/Clientes/Actualizar
+
+Crear un nuevo cliente:
+POST: api/Clientes
+
+Borrar un cliente:
+DELETE: api/Clientes/{diCliente}
+
+A continuación pasemos al apartado de videojuegos:
+Obtener listado de videojuegos:
+GET: api/Videojuegos
+Se devuelve una lista con toda la información relacionada a cada videojuego:
+nombre, año, protagonistas, productor, director, plataforma, precioDia
+
+Obtener listado de juegos por director de juego
+GET: api/Videojuegos/Director/{nombreDirector}
+
+Obtener listado de juegos por protagonistas del juego
+GET: api/Videojuegos/Protagonistas/{nombresProtagonistas}
+
+Obtener listado de juegos por productor del juego
+GET: api/Videojuegos/Productor/{nombreProductor}
+
+Obtener listado de juegos por fecha de lanzamiento
+GET: api/Videojuegos/Fecha/{año}
+
+Obtener un videojuego específico:
+GET: api/Videojuegos/{idJuego}
+
+Actualizar un videojuego:
+PUT: api/Videojuegos/Actualizar
+
+Crear un videojuego:
+POST: api/Videojuegos
+El precio del videojuego no se incluye, puesto que el precio se crea en otra tabla llamada precio_videojuego, debido a que los precios se actualizan constantemente.
+
+Eliminar un videojuego:
+DELETE: api/Videojuegos/{idJuego}
+
+Por último, el apartado de alquileres:
+Obtener listado de alquileres:
+GET: api/Alquileres
+
+Conocer quienes tienen alquilado un juego y no lo han devuelto 
+GET: api/Alquilers/Estadoo/false
+Esta funcionalidad le permite al gerente saber qué clientes no han entregado aún el videojuego, y la fecha en la cual lo deberían entregar
+
+Conocer el cliente más frecuente
+GET: api/Alquilers/ClienteMasFrecuente
+
+Conocer el título de juego más rentado
+GET: api/Alquilers/JuegoMasRentado
+
+Consultar las ventas del día
+GET: api/Alquilers/Ventas
+
+Obtener un alquiler específico
+GET: api/Alquileres/{idAlquiler}
+
+Actualizar un alquiler:
+PUT: api/Alquileres/Actualizar
+
+Crear un aqluiler:
+POST: api/Alquileres
+Este método devueve un comprobante, con el nombre y los apellidos del Cliente, valor pagado, fecha de la compra, de la devolución y el nombre del videojuego.
+
+Eliminar alquiler:
+DELETE: api/Alquileres/{idAlquiler}
