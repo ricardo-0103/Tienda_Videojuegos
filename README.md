@@ -1,5 +1,9 @@
 # Tienda_Videojuegos
-Apliación web para gestionar para gestionar todo el proceso básico de alquiler de una tienda de video juegos.
+Apliación web para gestionar para gestionar todo el proceso básico de alquiler de una tienda de videojuegos.
+
+## Stack:
+ASP.NET Core
+SQL Server
 
 ## Configuración inicial:
   - .NET SDK instalado
@@ -23,3 +27,6 @@ Apliación web para gestionar para gestionar todo el proceso básico de alquiler
 dotnet run
 ```
 La aplicación estará disponible en `https://localhost:44390`
+
+## Utilización de las peticiones:
+Debido a que la aplicación no cuenta con vistas, para probar y ejecutar los métodos se recomienda leer la documentación técnica que se encuentra en la carpeta Utils.
