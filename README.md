@@ -2,8 +2,8 @@
 Apliación web para gestionar para gestionar todo el proceso básico de alquiler de una tienda de videojuegos.
 
 ## Stack:
-ASP.NET Core
-SQL Server
+ - ASP.NET Core
+ - SQL Server
 
 ## Configuración inicial:
   - .NET SDK instalado
